@@ -11,12 +11,17 @@ function App() {
       .then((r) => r.json())
       .then(setPlants);
   }, []);
+
+  const addNewPlant= (myPlant) =>  { 
+    // setPlants([...plants, myPlant])
+    console.log(myPlant)
+  }
   
 
   return (
     <div className="app">
       <Header />
-      <PlantPage plants={plants}/>
+      <PlantPage plants={plants} addNewPlant={addNewPlant}/>
     </div>
   );
 }

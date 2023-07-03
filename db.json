@@ -41,6 +41,30 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Wendy k. Yeung",
+      "image": "https://commons.wikimedia.org/wiki/File:A-Cat.jpg",
+      "price": "0.04",
+      "id": 8
+    },
+    {
+      "name": "Wendy k. Yeung",
+      "image": "https://commons.wikimedia.org/wiki/File:A-Cat.jpg",
+      "price": "0.04",
+      "id": 9
+    },
+    {
+      "name": "Wendy k. Yeung",
+      "image": "https://commons.wikimedia.org/wiki/File:A-Cat.jpg",
+      "price": "0.04",
+      "id": 10
+    },
+    {
+      "name": "Wendy k. Yeung",
+      "image": "https://s3-media0.fl.yelpcdn.com/bphoto/bFP3myW-Y8IX42X2lnJwhg/o.jpg",
+      "price": "0.04",
+      "id": 11
     }
   ]
 }
