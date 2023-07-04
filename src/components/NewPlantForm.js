@@ -5,7 +5,7 @@ function NewPlantForm({addNewPlant}) {
   const [image, setImage] = useState('')
   const [price, setPrice] = useState(0.00)
 
-  const handleSubmit= (e) => { 
+  const handleSubmit = (e) => { 
     e.preventDefault()
 
     let newPlant = {

@@ -13,8 +13,7 @@ function App() {
   }, []);
 
   const addNewPlant= (myPlant) =>  { 
-    // setPlants([...plants, myPlant])
-    console.log(myPlant)
+    setPlants([...plants, myPlant])
   }
   
 
