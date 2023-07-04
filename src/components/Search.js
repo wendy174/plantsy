@@ -1,6 +1,6 @@
 import React from "react";
 
-function Search() {
+export default function Search() {
   return (
     <div className="searchbar">
       <label htmlFor="search">Search Plants:</label>
@@ -14,4 +14,4 @@ function Search() {
   );
 }
 
-export default Search;
+

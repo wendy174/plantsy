@@ -1,11 +1,23 @@
 import React, {useState} from "react";
 
-function NewPlantForm({addNewPlant}) {
+export default function NewPlantForm({addNewPlant}) {
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
   const [price, setPrice] = useState(0.00)
 
-  const handleSubmit = (e) => { 
+
+  // fetch('http://localhost:6001/plants', { 
+  //     method: 'POST', 
+  //     headers: {
+  //       "Content-Type": 'application/json',
+  //     }, 
+  //     body: JSON.stringify(newPlant)
+  //   }).then(r => r.json())
+  //     .then(myPlant => addNewPlant(myPlant))
+    
+  // }
+
+  const handleSubmit = async (e) => { 
     e.preventDefault()
 
     let newPlant = {
@@ -14,17 +26,25 @@ function NewPlantForm({addNewPlant}) {
       price:price
     }
 
-    fetch('http://localhost:6001/plants', { 
-      method: 'POST', 
-      headers: {
-        "Content-Type": 'application/json',
-      }, 
-      body: JSON.stringify(newPlant)
-    }).then(r => r.json())
-      .then(myPlant => addNewPlant(myPlant))
-    
-  }
+    try {
+      const response = await fetch('http://localhost:6001/plants', { 
+        method: 'POST', 
+        headers: {
+          "Content-Type": 'application/json',
+        }, 
+        body: JSON.stringify(newPlant)
+      });
+      
+      if (!response.ok) { // important bc returns http status code // fetch will resolve the promise even when a http error status is returned like (404 or 500)
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
+      const myPlant = await response.json();
+      addNewPlant(myPlant);
+    } catch(error) {
+      console.error('An error occurred while saving the plant:', error);
+    }
+  
 
   return (
     <div className="new-plant-form">
@@ -39,4 +59,4 @@ function NewPlantForm({addNewPlant}) {
   );
 }
 
-export default NewPlantForm;
+} 

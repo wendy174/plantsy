@@ -1,6 +1,6 @@
 import React from "react";
 
-function PlantCard({plant}) {
+export default function PlantCard({plant}) {
   return (
     <li className="card">
       <img src={plant.image} alt={plant.name} />
@@ -15,4 +15,4 @@ function PlantCard({plant}) {
   );
 }
 
-export default PlantCard;
+

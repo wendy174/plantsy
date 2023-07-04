@@ -143,6 +143,12 @@
       "image": "https://commons.wikimedia.org/wiki/File:A-Cat.jpg",
       "price": "0.04",
       "id": 24
+    },
+    {
+      "name": "Wendy k. Yeung",
+      "image": "https://scontent-bos5-1.xx.fbcdn.net/v/t1.6435-9/166675304_3835988369821710_540951438970789589_n.jpg?stp=dst-jpg_p600x600&_nc_cat=111&ccb=1-7&_nc_sid=a26aad&_nc_ohc=J4b-LH6t-z0AX--OfZA&_nc_ht=scontent-bos5-1.xx&oh=00_AfCaO0w6-HEyTKEuVkdx9ZfvkBftUhymSXRRURigfDr6Ww&oe=643AE209",
+      "price": "0.03",
+      "id": 25
     }
   ]
 }
