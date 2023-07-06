@@ -5,25 +5,13 @@ export default function NewPlantForm({addNewPlant}) {
   const [image, setImage] = useState('')
   const [price, setPrice] = useState(0.00)
 
-
-  // fetch('http://localhost:6001/plants', { 
-  //     method: 'POST', 
-  //     headers: {
-  //       "Content-Type": 'application/json',
-  //     }, 
-  //     body: JSON.stringify(newPlant)
-  //   }).then(r => r.json())
-  //     .then(myPlant => addNewPlant(myPlant))
-    
-  // }
-
   const handleSubmit = async (e) => { 
     e.preventDefault()
 
     let newPlant = {
-      name:name, 
-      image:image,
-      price:price
+      name: name, 
+      image: image,
+      price: price
     }
 
     try {
@@ -35,7 +23,7 @@ export default function NewPlantForm({addNewPlant}) {
         body: JSON.stringify(newPlant)
       });
       
-      if (!response.ok) { // important bc returns http status code // fetch will resolve the promise even when a http error status is returned like (404 or 500)
+      if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
@@ -44,7 +32,7 @@ export default function NewPlantForm({addNewPlant}) {
     } catch(error) {
       console.error('An error occurred while saving the plant:', error);
     }
-  
+  }
 
   return (
     <div className="new-plant-form">
@@ -59,4 +47,14 @@ export default function NewPlantForm({addNewPlant}) {
   );
 }
 
-} 
+
+  // fetch('http://localhost:6001/plants', { 
+  //     method: 'POST', 
+  //     headers: {
+  //       "Content-Type": 'application/json',
+  //     }, 
+  //     body: JSON.stringify(newPlant)
+  //   }).then(r => r.json())
+  //     .then(myPlant => addNewPlant(myPlant))
+    
+  // }
