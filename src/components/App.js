@@ -27,6 +27,7 @@ export default function App() {
     fetchData();
   }, []);
 
+  //
 
   const addNewPlant= (myPlant) =>  { 
     setPlants([...plants, myPlant])
