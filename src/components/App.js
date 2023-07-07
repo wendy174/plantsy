@@ -12,7 +12,7 @@ export default function App() {
   //     .then((r) => r.json())
   //     .then(setPlants);
   // }, []);
-
+  //
 
   useEffect(() => {
     const fetchData = async () => {
