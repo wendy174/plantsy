@@ -5,6 +5,7 @@ import PlantPage from "./PlantPage";
 
 export default function App() {
   const [plants, setPlants] = useState([])
+  const [searchTerm, setSearchTerm] = useState([])
 
   // useEffect(() => {
   //   fetch("http://localhost:6001/plants")
@@ -32,12 +33,16 @@ export default function App() {
   const addNewPlant= (myPlant) =>  { 
     setPlants([...plants, myPlant])
   }
+
+  const updateSearch = (searchInput) => { 
+    setSearchTerm(searchInput)
+  }
   
 
   return (
     <div className="app">
-      <Header />
-      <PlantPage plants={plants} addNewPlant={addNewPlant}/>
+      <Header  />
+      <PlantPage updateSearch={updateSearch} searchTerm = {searchTerm} plants={plants} addNewPlant={addNewPlant}/>
     </div>
   );
 }
