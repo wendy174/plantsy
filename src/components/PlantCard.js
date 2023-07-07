@@ -7,7 +7,7 @@ export default function PlantCard({plant}) {
     setIsInStock(!isInStock)
   }
 
-
+// 
 
 
 
