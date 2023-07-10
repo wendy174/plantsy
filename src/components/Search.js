@@ -14,7 +14,7 @@ export default function Search({searchTerm, updateSearch}) {
         id="search"
         value = {searchTerm}
         placeholder="Type a name to search..."
-        onChange={(e) => updateSearch(e.target.value)}
+        onChange={(e) => updateSearch(e.target.value)} // capture input with e.target.value
       />
     </div>
   );
