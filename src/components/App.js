@@ -37,12 +37,14 @@ export default function App() {
   const updateSearch = (searchInput) => { 
     setSearchTerm(searchInput)
   }
+
+  let filteredPlants = plants.filter(plant => plant.name.toLowerCase().includes(searchTerm))
   
 
   return (
     <div className="app">
       <Header  />
-      <PlantPage updateSearch={updateSearch} searchTerm = {searchTerm} plants={plants} addNewPlant={addNewPlant}/>
+      <PlantPage updateSearch={updateSearch} searchTerm={searchTerm} plants={filteredPlants} addNewPlant={addNewPlant}/>
     </div>
   );
 }
