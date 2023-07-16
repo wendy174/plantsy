@@ -14,6 +14,7 @@ export default function NewPlantForm({addNewPlant}) {
       price: price
     }
 
+    // Handles fetch request 
     try {
       const response = await fetch('http://localhost:6001/plants', { 
         method: 'POST', 
@@ -23,12 +24,17 @@ export default function NewPlantForm({addNewPlant}) {
         body: JSON.stringify(newPlant)
       });
       
+      // validates the response status 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
+
+      // reads response body, parses it to jason and assigns my plant to it 
+      // wait is here to wait for the response.json promise to resolve 
       const myPlant = await response.json();
       addNewPlant(myPlant);
+
     } catch(error) {
       console.error('An error occurred while saving the plant:', error);
     }
