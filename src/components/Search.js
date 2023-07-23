@@ -2,10 +2,6 @@ import React, {useState} from "react";
 
 export default function Search({searchTerm, updateSearch}) {
 
-
-
-
-
   return (
     <div className="searchbar">
       <label htmlFor="search">Search Plants:</label>

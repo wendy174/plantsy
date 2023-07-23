@@ -11,7 +11,7 @@ export default function NewPlantForm({addNewPlant}) {
   const handleChange = (e) => { 
     // target.name is always a string so need to convert to a number 
     // target.name name attribute of the form input that triggered the change in event ('name, image, price)
-    let value = e.target.name === 'price' ? parseFloat(e.target.value) : e.target.value;
+    // let value = e.target.name === 'price' ? parseFloat(e.target.value) : e.target.value;
     
     setNewPlant({
       ...newPlant, 
